@@ -24,7 +24,7 @@ Artificial intelligence (AI) is a fundamental part of the next industrial revolu
 Many AI projects and state of the art models ignore training and evaluation cost in favour of the best results of the model. There are diminishing returns to obtaining the absolute best performance out of a model. Whilst having better accuracy and low loss when training AI models is desirable, practical use of such models does not always require the trade-offs of obtaining the best results and an acceptable level of error for more efficient use of computer resources can be acceptable.
 
 # Methodology
-For this investigation a classification problem, determining the brand of shoe from a given image is chosen\[1]. This is a fairly common use case of such AI systems. The dataset is small at 16.53 MB in total, with three categories of shoes.
+For this investigation a classification problem, determining the brand of shoe from a given image is chosen[1]. This is a fairly common use case of such AI systems. The dataset is small at 16.53 MB in total, with three categories of shoes.
 
 ## Examples from the data set
 ![Converse Shoe](images/176.jpg)
@@ -41,7 +41,7 @@ Each experiment has a specific focus on a component of a simple computer vision 
 1. The Accuracy of both training and test dataset splits
 2. The time to complete an individual run of an experiment
 3. Amount of memory is used by the AI model
-4. The effective use of memory by an experimental run\*
+4. The effective use of memory by an experimental run*
 \*This was only done for experiment 3, to evaluate the effect of those optimisations on memory usage
 
 Only a synthetic performance metric of the accuracy of the test set is used. More advanced metrics of performance should be evaluated in the future.
@@ -49,8 +49,21 @@ Only a synthetic performance metric of the accuracy of the test set is used. Mor
 ## Hardware used
 I made use of my workstation which has 64GB of RAM, 6 core CPU with 12 threads and an Nvidia RTX 3060 with 12GB of RAM.
 
+## Specific implementation details
+Each experiment uses 100 epoch runs. Over training and over shooting is not considered. The specific training loops make use of an ADAM optimiser (with standard parameters used in the PyTorch documentation[2]). The loss function used is Cross Entropy Loss[3]. A custom data loader is used which randomises the order of the images each run. Random cropping is used, and the image pixels are automatically unscaled by the TorchVision transforms.
+
 # Experiment 1 - A look at different models
-This experiment looks at the impact of model size on the accuracy of each
+This experiment looks at the impact of model size on the accuracy and resource use of each experimental run.
+
+## Results
+### Time impact
+![Experiment 1 Time Grpah](images/diagrams/Model%20Training/Amount%20of%20time%20each%20model%20took%20to%20train.svg)
+
+### Memory Impact
+![Experiment 1 Memory Graph](images/diagrams/Model%20Training/Amount%20of%20Memory%20Used%20Per%20Model.svg)
+
+### Accuracy of the final models for each run
+![Experiment 1 Accuracy Graph](images/diagrams/Model%20Training/Accuracy%20of%20Models%20for%20100%20Epochs.svg)
 
 # Experiment 2 - A look at image pre-processing
 
@@ -63,4 +76,6 @@ This experiment looks at the impact of model size on the accuracy of each
 # Future work
 
 # References
-- \[1] Nike, Adidas and Converse Shoes Images, https://www.kaggle.com/datasets/die9origephit/nike-adidas-and-converse-imaged, 18 September 2022
+- [1] Nike, Adidas and Converse Shoes Images, https://www.kaggle.com/datasets/die9origephit/nike-adidas-and-converse-imaged, Accessed: 18 September 2022
+- [2] ADAM, https://pytorch.org/docs/stable/generated/torch.optim.Adam.html, Accessed: 18 September 2022
+- [3] CROSSENTROPYLOSS, https://pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html, Accessed: 18 September 2022
