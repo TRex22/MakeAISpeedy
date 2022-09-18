@@ -107,7 +107,7 @@ There are many strategies which can help improve the time cost and even memory c
 # Limitations of the work done (and potential future work)
 This work was very limited. Many more experiments and tests should be performed.
 
-1.The effect of randomness on these models should be evaluated with a random initialise experiment to evaluate the effect of randomness on the performance of the models used.
+1. The effect of randomness on these models should be evaluated with a random initialise experiment to evaluate the effect of randomness on the performance of the models used.
 2. Early stopping and overshoot detection techniques could also be used to mitigate over-training and optimise the final models and their performance.
 3. The use of explainable AI techniques such as Grad-CAM should be considered to evaluate performance of the models as well as areas of improvement
 4. Evaluation of more complex custom models to solve the given problems should be considered
