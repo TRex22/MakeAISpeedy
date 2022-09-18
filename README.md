@@ -19,7 +19,7 @@ My blog: https://jasonchalom.com/blog
 Machine learning techniques, especially in the area of computer vision, have opened a new frontier of research and industry - however the initial cost of entry into the field is a boundary, especially in developing economies. There are many techniques and approaches to optimising these work-flows in order to make them more computationally efficient, and therefore cheaper. Such techniques include traditional software engineering, data and signals processing, as well as more advanced optimisations to the model structures and training pipelines to make the process more efficient. These techniques have trade-offs and are task dependant but when combined appropriately can be a powerful tool-kit to improve computability of large work-flows. This poster evaluates a selection of techniques aimed at making computer vision easier to compute in memory usage, and time.
 
 # Introduction
-Artificial intelligence (AI) is a fundamental part of the next industrial revolution. There is a lot of opportunity for innovation. However the cost, and access to AI - especially in computer vision - is a limiting factor in developing economies. AI on the edge is also limited by the practicality of the AI being used and such low power and embedded devices.
+Artificial intelligence (AI) is a fundamental part of fourth industrial revolution (4IR). There is a lot of opportunity for innovation. However the cost, and access to AI - especially in computer vision - is a limiting factor in developing economies. AI on the edge is also limited by the practicality of the AI being used and the constraints of those systems.
 
 Many AI projects and state of the art models ignore training and evaluation cost in favour of the best results of the model. There are diminishing returns to obtaining the absolute best performance out of a model. Whilst having better accuracy and low loss when training AI models is desirable, practical use of such models does not always require the trade-offs of obtaining the best results and an acceptable level of error for more efficient use of computer resources can be acceptable.
 
@@ -38,7 +38,7 @@ Each experiment has a specific focus on a component of a simple computer vision 
 3. The last experiment applies platform and library specific optimisations and evaluates the effect on the metrics of the chosen baseline model
 
 ## Metrics which are evaluated
-1. The Accuracy of both training and test dataset splits
+1. The accuracy of both training and test dataset splits
 2. The time to complete an individual run of an experiment
 3. Amount of memory is used by the AI model
 4. The effective use of memory by an experimental run*
@@ -74,7 +74,7 @@ ResNet18 performed the best (in terms of test accuracy) over other models
 # Experiment 2 - A look at image pre-processing
 This experiment looks at the impact of the input image size on time, memory usage and the accuracy performance of the ResNet18 model.
 
-As expected the smaller the dimensional size of the input images the faster the training and evaluation is and the less memory that is used. However accuracy does drop off quite substantially as the amount of input data decreases. only up to the 60x60x3 input size images are realistically usable. However the time and memory savings more than double.
+As expected the smaller the dimensional size of the input images the faster the training and evaluation is and the less memory that is used. However accuracy does drop off quite substantially as the amount of input data decreases. Only up to the 60x60x3 input size images are realistically usable. However the time and memory savings more than double.
 
 ## Results
 ### Time Impact
@@ -102,7 +102,7 @@ There was about a 10% effect on time cost for both performance optimisations use
 ![Experiment 3 Accuracy Graph](images/diagrams/Optimisations/Accuracy%20of%20Models%20for%20100%20Epochs.svg)
 
 # Conclusion
-There are many strategies which can help improve the time cost and even memory cost of AI models in training and evaluation. This small set of experiments just looks at a few strategies and their impacts on some constrained metrics. This still shows that high resource usages, such as with much larger models does not always imply greater performance of those models, especially in evaluation on an unseen set of data. There are caveats in that some of these techniques will also negative impact those performance metrics but under the specific conditions of the problem trying to be solved the increase in performance may be acceptable for the loss in precision.
+There are many strategies which can help improve the time cost and even memory cost of AI models in training and evaluation. This small set of experiments just looks at a few strategies and their impacts on some constrained metrics. This still shows that high resource usages, such as with much larger models does not always imply greater performance of those models, especially in evaluation on an unseen set of data. There are caveats in that some of these techniques will also negatively impact those performance metrics but under the specific conditions of the problem trying to be solved the increase in performance may be acceptable for the loss in precision.
 
 # Limitations of the work done (and potential future work)
 This work was very limited. Many more experiments and tests should be performed.
