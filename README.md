@@ -26,7 +26,7 @@ Many AI projects and state of the art models ignore training and evaluation cost
 # Methodology
 For this investigation a classification problem, determining the brand of shoe from a given image is chosen[1]. This is a fairly common use case of such AI systems. The dataset is small at 16.53 MB in total, with three categories of shoes.
 
-## Examples from the data set
+## Examples from the data set[1]
 ![Converse Shoe](images/176.jpg)
 ![Adidas Shoe](images/266.jpg)
 ![Nike Shoe](images/271.jpg)
@@ -53,21 +53,45 @@ I made use of my workstation which has 64GB of RAM, 6 core CPU with 12 threads a
 Each experiment uses 100 epoch runs. Over training and over shooting is not considered. The specific training loops make use of an ADAM optimiser (with standard parameters used in the PyTorch documentation[2]). The loss function used is Cross Entropy Loss[3]. A custom data loader is used which randomises the order of the images each run. Random cropping is used, and the image pixels are automatically unscaled by the TorchVision transforms.
 
 # Experiment 1 - A look at different models
-This experiment looks at the impact of model size on the accuracy and resource use of each experimental run.
+This experiment looks at the impact of model size on the accuracy and resource use of each experimental run. The family of ResNet models as well as a simple 2-layer convolutional neural network (CNN) with two linear neural networks (NN) at the end are evaluated.
+
+A notable outcome of this experiment is that ResNet18 performed the best of all models and the small CNN performed slightly better than random guessing whist both used considerably less memory and took considerably less time to train and evaluate.
 
 ## Results
 ### Time impact
-![Experiment 1 Time Grpah](images/diagrams/Model%20Training/Amount%20of%20time%20each%20model%20took%20to%20train.svg)
+The smallest graphs took the least amount of time to train and evaluate
+![Experiment 1 Time Graph](images/diagrams/Model%20Training/Amount%20of%20time%20each%20model%20took%20to%20train.svg)
 
 ### Memory Impact
+The smallest graphs consumed the least amount of memory
 ![Experiment 1 Memory Graph](images/diagrams/Model%20Training/Amount%20of%20Memory%20Used%20Per%20Model.svg)
 
 ### Accuracy of the final models for each run
+ResNet18 performed the best (in terms of test accuracy) over other models
 ![Experiment 1 Accuracy Graph](images/diagrams/Model%20Training/Accuracy%20of%20Models%20for%20100%20Epochs.svg)
 
 # Experiment 2 - A look at image pre-processing
 
+## Results
+### Time Impact
+![Experiment 2 Time Graph](images/diagrams/Image%20Training/Amount%20of%20time%20each%20model%20took%20to%20train.svg)
+
+### Memory Impact
+![Experiment 2 Memory Graph](images/diagrams/Image%20Training/Amount%20of%20Memory%20Used%20Per%20Model.svg)
+
+### Accuracy of the final models for each run
+![Experiment 2 Accuracy Graph](images/diagrams/Image%20Training/Accuracy%20of%20Models%20for%20100%20Epochs.svg)
+
 # Experiment 3 - The application of programmatic optimisations
+## Results
+### Time Impact
+![Experiment 3 Time Graph](images/diagrams/Optimisations/Amount%20of%20time%20each%20model%20took%20to%20train.svg)
+
+### Memory Impact
+![Experiment 3 Memory Graph](images/diagrams/Optimisations/Amount%20of%20Memory%20Used%20Per%20Model.svg)
+
+### Accuracy of the final models for each run
+![Experiment 3 Accuracy Graph](images/diagrams/Optimisations/Accuracy%20of%20Models%20for%20100%20Epochs.svg)
 
 # Conclusion
 
