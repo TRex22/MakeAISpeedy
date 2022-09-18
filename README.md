@@ -1,7 +1,7 @@
 # A Tool-kit Of Techniques To Make Computer Vision Models Easier To Train And Evaluate
 AIExpo Africa 2022 - Poster Presentation 
 
-[Poster at the event]()
+[Poster at the event](https://github.com/TRex22/MakeAISpeedy/raw/main/Final%20Poster%20Design.pdf)
 
 ## About me
 I am a senior software engineer at a Fin-tech called DocFox and a master’s candidate at the University of the Witwatersrand focusing on computer vision, explainable AI and self-driving cars.
@@ -25,6 +25,11 @@ Many AI projects and state of the art models ignore training and evaluation cost
 
 # Methodology
 For this investigation a classification problem, determining the brand of shoe from a given image is chosen\[1]. This is a fairly common use case of such AI systems. The dataset is small at 16.53 MB in total, with three categories of shoes.
+
+## Examples from the data set
+![Converse Shoe](images/176.jpg)
+![Adidas Shoe](images/266.jpg)
+![Nike Shoe](images/271.jpg)
 
 ## Scope of experiments
 Each experiment has a specific focus on a component of a simple computer vision pipeline:
