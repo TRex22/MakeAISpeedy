@@ -42,6 +42,7 @@ Each experiment has a specific focus on a component of a simple computer vision 
 2. The time to complete an individual run of an experiment
 3. Amount of memory is used by the AI model
 4. The effective use of memory by an experimental run*
+
 \*This was only done for experiment 3, to evaluate the effect of those optimisations on memory usage
 
 Only a synthetic performance metric of the accuracy of the test set is used. More advanced metrics of performance should be evaluated in the future.
