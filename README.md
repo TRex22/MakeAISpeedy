@@ -1,7 +1,7 @@
 # A Tool-kit Of Techniques To Make Computer Vision Models Easier To Train And Evaluate
 AIExpo Africa 2022 - Poster Presentation 
 
-[Poster at the event](https://github.com/TRex22/MakeAISpeedy/raw/main/Final%20Poster%20Design.pdf)
+[Poster at the event](https://github.com/TRex22/MakeAISpeedy/blob/main/Final%20Poster%20Design.pdf)
 
 ## About me
 I am a senior software engineer at a Fin-tech called DocFox and a master’s candidate at the University of the Witwatersrand focusing on computer vision, explainable AI and self-driving cars.
