@@ -7,6 +7,7 @@ AIExpo Africa 2022 - Poster Presentation
 I am a senior software engineer at a Fin-tech called DocFox and a master’s candidate at the University of the Witwatersrand focusing on computer vision, explainable AI and self-driving cars.
 
 My blog: https://jasonchalom.com/blog
+Email: contact@jasonchalom.com
 
 ## Thanks
 - My girlfriend :)
